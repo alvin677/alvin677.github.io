@@ -3,12 +3,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>workspace</title>
+    <title>Krabs in Space🌴</title>
 
 </head>
 
 <style>
-    body {background-color: #000000; margin:0;
+    body {background-color: #ececec; margin:0;
         overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
@@ -17,10 +17,10 @@
       width: 0;
       height: 0;
   }
-    .back {background-image: url("hot.gif"); background-size:cover; background-repeat:no-repeat; height:100%}
-    .back2 {background-image: url("hot4.gif"); background-size:cover; background-repeat:no-repeat;}
-    .back3 {background-image: url("hot5.gif"); background-size:cover; background-repeat:no-repeat;}
-    .title {color:azure; text-align:center; font-family: 'Courier New', monospace;}
+    .workspace {background-image: url("hot.gif"); background-size:cover; background-repeat:no-repeat; height:125px; width:250px; border-radius:20px;}
+    .kfc {background-image: url("kfc.gif"); background-size:cover; background-repeat:no-repeat; height:125px; width:250px; border-radius:20px;}
+    .title {color:rgb(20, 20, 20); text-align:center; font-family: 'Courier New', monospace; font-size:50px}
+    .credits {color:rgb(20, 20, 20); text-align:center; font-family: 'Courier New', monospace; font-size:15px; position: absolute; bottom:0px; left:42.5%}
 
 .discord {
   padding: 1.3em 3em;
@@ -113,14 +113,25 @@
 
 </style>
 
+<script>
+    function game() {
+        fetch('https://rs.jonhosting.com/game.txt')
+        .then((response) => response.json())
+        .then((data) => document.location.href = "https://www.roblox.com/games/"+data);
+    }
+</script>
+
 
 <body>
-    <div class = "back">
+    <div>
         <center>
-            <button class = "discord" onclick="document.location.href = 'https\://discord.gg/sgK9Xx9aBp'"> Discord </button>
-        
-        
-            <div style ="position: absolute; bottom: 10px; left:0.5%">
+            <p class = "title">Space Condos</p>
+            <div style = "margin-top:20%">
+                <button class = "discord" onclick="game();"> Latest Upload </button>
+                <button class = "discord" onclick="document.location.href = 'https\://discord.gg/rblxcondos'"> Discord </button>
+            </div>
+        </center>
+            <div style ="position: absolute; bottom: 270px; left:0.5%">
             <button class="cssbuttons-io">
                 <span onclick="document.location.href = 'https\://web.jonhosting.com/'"> Sponsor</span>
               </button>
@@ -128,29 +139,13 @@
                 <span onclick="document.location.href = 'https\://github.com/alvin677'"> Github</span>
               </button>
             </div>
-        </center>
-    </div>
-
-    <div class = "back2">
-        <center>
-            <div>
-                <h3 class = "text">2017 accounts alt generator (390k+ stock)</p>
-                <img src = "gen.png">
+            
+            <div style = "position: absolute; bottom: 10px; left:0.3%">
+                <div class = "workspace" style = "margin-bottom:5px" onclick="document.location.href = 'https\://discord.gg/sgK9Xx9aBp'"></div>
+                <div class = "kfc" onclick="document.location.href = 'https\://discord.gg/rblxcons'"></div>
             </div>
 
-            <div>
-                <h3 class = "text" style = "color:#ff00d0; margin-top:100px">"Search" script, contains a search bar where you can search for hundreds of community uploaded scripts and also use admin commands</p>
-                <img src = "script.png">
-            </div>
-            <div>
-                <h1 class = "text" style = "color:crimson">A UI Library will hopefully get in development soon as well!</p>
-            </div>
-        </center>
-    </div>
-
-    <div class = "back3">
-        <center>
-        </center>
+            <p class = "credits">Website developed by Cedric#0591</p>
     </div>
 </body>
 </html>
