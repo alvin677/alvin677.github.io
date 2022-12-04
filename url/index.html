@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+      function L(){
+        countD(10+Math.ceil(Math.random()*30));
+      }
+      function countD(t){
+        t--;
+        document.getElementById('tim').innerHTML=t;
+        if(t){
+          setTimeout(function(){countD(t);},1000);
+        }else{
+          document.getElementsByClassName('dis')[0].className='en';
+        }
+      }
+    </script>
+    <style>
+      button{color:#333;border-radius:50%;}
+      button:hover{opacity:0.8;}
+      .dis{opacity:0.3;}
+    </style>
+  </head>
+  <body onload="L()">
+    <center><button class="dis">Click me</button></center>
+    <span>You can continue in <font id="tim">9</font> seconds</span>
+    <div>
+      
+    </div>
+  </body>
+</html>
